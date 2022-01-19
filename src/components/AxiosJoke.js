@@ -4,6 +4,7 @@ import axios, { Axios } from "axios"
 import '../App.css'
 
 function AxiosJoke() {
+  document.title="Joke"
     const[joke, setJoke]  = useState('');
     const [type,setType] = useState('Any');
     const handletype=(e)=>{
@@ -32,7 +33,8 @@ function AxiosJoke() {
          <input type="text" value={type} onChange={handletype} placeholder='Programming,Misc,Dark,Pun,Spooky' />   
         <button type='submit' onClick={getJoke}>Get Joke</button>
         <h1 >{joke}</h1>
-        <footer>Don't worry nsfw,religious,political,racist,sexist,explicit contents are blacklisted. 
+        <footer>Don't worry nsfw,religious,political,racist,sexist,explicit contents are blacklisted.
+          <br /><br /> 
          &copy; {(new Date().getFullYear())}  Vilas Hegde All Rights are  Reserved 
          </footer>
         </div>
