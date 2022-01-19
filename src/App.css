@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+body{
+  background: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.joke{
   display: flex;
+  margin: 10% auto;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.joke button{
+  padding: 20px 40px ;
+  background:linear-gradient(rgba(26, 255, 0, 0.4),rgba(83, 94, 63, 0.733));
+  color:#fff ;
+  font-size: 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.658);
+  cursor: pointer;
+  transform: scale(1);
+  outline: none;
+  border: none;
+  transition: .3s;
+  flex-wrap: wrap;
+  margin-bottom: 10%;
+  user-select: none;
+  font-weight: 700;
+}
+.joke marquee{
+  width: 40%;
+  overflow: hidden;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.joke input{
+  width: 40%;
+  height: 40px;
+  margin-bottom: 30px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0px 5px 5px 3px rgba(0, 0, 0, 0.4);
+  overflow-y: scroll;
+}
+.joke button:hover{
+  transform: scale(.9);
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.4);
+  background:linear-gradient(rgba(69, 88, 33, 0.795),rgba(17, 90, 9, 0.884));
+}
+.joke h1{
+  color: rgb(109, 226, 255);
+  width: 70%;
+  margin: auto;
+  font-weight: 900;
+  text-shadow:  0px 5px 5px rgb(2, 1, 1);
+}
+.joke h2{
+  color: #fff;
+  text-shadow:  0px 5px 5px rgb(2, 1, 1);
+}
+.joke footer{
+  position: absolute;
+  bottom: 10px;
+  color: rgba(255, 255, 255, 0.644);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media(max-width:900px){
+
+  .joke button{
+    padding: 15px 30px ;
+    background:linear-gradient(rgba(26, 255, 0, 0.4),rgba(83, 94, 63, 0.733));
+    color:#fff ;
+    font-size: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.658);
+    cursor: pointer;
+    transform: scale(1);
+    outline: none;
+    border: none;
+    transition: .3s;
+    flex-wrap: wrap;
+    margin-bottom: 10%;
+    user-select: none;
+    font-weight: 700;
   }
-  to {
-    transform: rotate(360deg);
+  .joke marquee{
+    width: 100%;
+    overflow: hidden;
+    color: #fff;
+    margin-bottom: 10px;
   }
+  .joke input{
+    width: 90%;
+    height: 30px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0px 5px 5px 3px rgba(0, 0, 0, 0.4);
+    overflow-y: scroll;
+  }
+  .joke button:hover{
+    transform: scale(.9);
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.4);
+    background:linear-gradient(rgba(69, 88, 33, 0.795),rgba(17, 90, 9, 0.884));
+  }
+  .joke h1{
+    color: #fff;
+    width: 100%;
+    margin: auto;
+    text-shadow:  0px 5px 5px rgb(2, 1, 1);
+    line-height: 50px;
+  }
+  .joke footer{
+    position: absolute;
+    bottom: 10px;
+    color: rgba(255, 255, 255, 0.644);
+  }
+  
 }
