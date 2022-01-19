@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/vilasrhegde/jokes.git/static/css/main.1b466826.css",
+    "main.js": "/vilasrhegde/jokes.git/static/js/main.05be9365.js",
+    "index.html": "/vilasrhegde/jokes.git/index.html",
+    "main.1b466826.css.map": "/vilasrhegde/jokes.git/static/css/main.1b466826.css.map",
+    "main.05be9365.js.map": "/vilasrhegde/jokes.git/static/js/main.05be9365.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1b466826.css",
+    "static/js/main.05be9365.js"
+  ]
+}
