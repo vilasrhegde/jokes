@@ -6,6 +6,7 @@ import TextForm from './components/TextForm'
 import './App.css'
 
 import { BrowserRouter , Routes, Route,Link } from 'react-router-dom';
+import GuessNum from './components/GuessNum'
 
 function App() {
   const navStyle ={
@@ -17,14 +18,18 @@ function App() {
   return (
 
     <BrowserRouter>
+    
   <div className="App">
       <nav className='navbar'>
-          <Link to='/' style={navStyle}>
+          <Link to='' style={navStyle}>
           <h1>Home</h1>
           </Link>
           <ul className="nav-links">
               <Link to='/bored' style={navStyle}>
               <li>Bored?</li>
+              </Link>
+              <Link to='/GuessNum' style={navStyle}>
+              <li>Guess Num</li>
               </Link>
               <Link to='/Joke' style={navStyle}>
               <li>Joke</li>
@@ -39,9 +44,13 @@ function App() {
      <Route path="/bored"  element={<Bored />}/>
      <Route path="/Joke"  element={<AxiosTicket />}/>
      <Route path="/Jokelite" element={<AxiosJoke />} /> 
+     <Route path="/GuessNum" element={<GuessNum />} /> 
+
     </Routes>
     </div>
-    </BrowserRouter>  )
+    </BrowserRouter>  
+
+    );
 }
 
 export default App

@@ -11,13 +11,13 @@ body{
 }
 .bored-content{
   display: flex;
-  margin: 10% auto;
+  height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .bored-content h1{
-  color: rgb(109, 226, 255);
+  color: rgb(255, 255, 255);
   margin: 20px auto;
   font-weight: 900;
   text-shadow:  0px 5px 5px rgb(2, 1, 1);
@@ -100,7 +100,7 @@ body{
   background:linear-gradient(rgba(69, 88, 33, 0.795),rgba(17, 90, 9, 0.884));
 }
 .joke h1{
-  color: rgb(109, 226, 255);
+  color: rgb(255, 255, 255);
   width: 70%;
   margin: auto;
   font-weight: 900;
@@ -212,4 +212,60 @@ nav{
   border-radius: 10px;
   margin: 0 5px;
   
+}
+
+
+
+
+/*-------------------------Guess The Number------------------------------------*/
+.guess{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.guess .play_btn{
+  padding: 20px 50px;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 5px 5px 3px rgba(0, 0, 0, 0.4);
+  margin: 20px;
+  transition: .3s;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+.guess .play_btn:hover{
+  box-shadow: 0px 0 5px 3px rgba(255, 255, 255, 0.342);
+}
+.guess_inp{
+  height: 40px;
+  width: 30%;
+  border-radius: 20px;
+  text-align: center;
+  border: none;
+  outline: none;
+  scroll-snap-type: none;
+  font-weight: 900; 
+  font-size: 1.2rem;
+
+}
+.guess h1{
+  color: #fff;
+  text-shadow: 5px 5px 5px #000;
+}
+.guess .pres_prev{
+  color: rgba(240, 255, 255,0.7 );
+}
+.h1success{
+  color: rgb(0, 252, 42);
+}
+.guess h3{
+  margin-top: 20px;
+  color: #fff;
+  text-shadow: 5px 5px 5px #000;
+}
+::-webkit-scrollbar{
+  display: none;
 }
