@@ -73,7 +73,7 @@ const handleOnChange= (event)=>{
 
        <div style={darkmode} className='container-fluid mx-0' id='textform'>
             <h1 >Enter your sentence here :</h1>
-            <button className='btn btn-success my-4 mx-1' style={darkmode} onClick={handleDark}>Dark/White</button>
+            <button className='btn btn-success my-4 mx-1' style={darkmode} onClick={handleDark}>{darkmode.color=='black' ? "Darkmode" : "Lightmode"}</button>
             <div className="mb-3" style={darkmode}>
                 
             <textarea className="form-control" value={text} id='mybox' style={darkmode} onChange={handleOnChange} rows="3"></textarea>
