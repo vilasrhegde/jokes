@@ -218,6 +218,7 @@ nav{
 
 
 /*-------------------------Guess The Number------------------------------------*/
+
 .guess{
   display: flex;
   justify-content: center;
@@ -268,4 +269,144 @@ nav{
 }
 ::-webkit-scrollbar{
   display: none;
+}
+
+@media(max-width:900px){
+  
+  .navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    background: #111;
+  }
+  .nav-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  li{
+    list-style: none;
+    padding: 0 10px;
+    font-size: 1rem;
+  }
+
+
+  #textform{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+  }
+  nav{
+    position: relative;
+    object-fit: scale-down;
+    overflow: hidden;
+  }
+  .nav-img{
+    position: relative;
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 10px;
+    margin: 0 5px;
+    
+  }
+
+  .bored-content{
+    display: flex;
+    height: 60vh;
+    padding: 20px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .bored-content h1{
+    color: rgb(255, 255, 255);
+    margin: 20px auto;
+    font-weight: 900;
+    text-shadow:  0px 5px 5px rgb(2, 1, 1);
+
+  }
+  .bored-content button{
+    padding: 20px 40px ;
+    background:linear-gradient(rgba(184, 206, 182, 0.4),rgba(128, 143, 101, 0.733));
+    color:#fff ;
+    font-size: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.658);
+    cursor: pointer;
+    transform: scale(1);
+    outline: none;
+    border: none;
+    transition: .3s;
+    flex-wrap: wrap;
+    margin-bottom: 5%;
+    user-select: none;
+    font-weight: 700;
+  }
+  .bored-content button:hover{
+    transform: scale(.9);
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.4);
+    background:linear-gradient(rgba(128, 167, 125, 0.4),rgba(77, 97, 41, 0.733));
+  }
+  .bored-content h2{
+    color: #fff;
+    text-shadow:  0px 5px 5px rgb(2, 1, 1);
+  }
+
+  .guess{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 60vh;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  .guess .play_btn{
+    padding: 20px 50px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 5px 5px 3px rgba(0, 0, 0, 0.4);
+    margin: 20px;
+    transition: .3s;
+    font-size: 1.4rem;
+    font-weight: 900;
+  }
+  .guess .play_btn:hover{
+    box-shadow: 0px 0 5px 3px rgba(255, 255, 255, 0.342);
+  }
+  .guess_inp{
+    height: 40px;
+    width: 70%;
+    border-radius: 20px;
+    text-align: center;
+    border: none;
+    outline: none;
+    scroll-snap-type: none;
+    font-weight: 900; 
+    font-size: 1.2rem;
+
+  }
+  .guess h1{
+    color: #fff;
+    text-shadow: 5px 5px 5px #000;
+    font-size: 25px;
+    text-align: center;
+  }
+  .guess .pres_prev{
+    color: rgba(240, 255, 255,0.7 );
+    text-align: center;
+    font-size: 18px;
+  }
+  .h1success{
+    color: rgb(0, 252, 42);
+    text-align: center;
+  }
+  .guess h3{
+    margin-top: 20px;
+    color: #fff;
+    text-shadow: 5px 5px 5px #000;
+  }
 }

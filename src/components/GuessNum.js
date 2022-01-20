@@ -2,11 +2,10 @@ import React,{useState,useRef,useEffect} from 'react';
 import '../App.css'
 
 function GuessNum() {
-  document.title='Guess the number'
+  document.title='Guess the number';
 
   const [userGuess, setUguess] =useState('')
   const [rand,setRand] = useState('')
-  const [output, setOutput] = useState('')
   const [prime, setPrime] = useState('')
   const prevGuess = useRef('')
 
@@ -18,8 +17,8 @@ function GuessNum() {
 
 
     let count=0;
-    for (let i = 1; i < 10; i++) {
-      if (rand % i === 0){
+    for (let i = 1; i <= 9; i++) {
+      if (rand % i == 0){
         count++;
       } 
     } 
@@ -46,13 +45,13 @@ function GuessNum() {
     <input disabled={rand==''}  onChange={e => setUguess(e.target.value)} value={userGuess} type="number" min="0" max="100" maxLength="3" className='guess_inp' />
     <h3 hidden={userGuess==''}><span className='pres_prev'>Present number is {userGuess} and previous was {prevGuess.current}</span> </h3>
     <br />
-    <h1 hidden={userGuess==''}>{userGuess < rand & rand %2 !=0 & prime == "No" ? "Try larger and odd" : ""}</h1>
-    <h1 hidden={userGuess==''}>{userGuess > rand & rand %2 !=0 & prime == "No" ? "Try smaller and odd" : ""}</h1>
-    <h1 hidden={userGuess==''}>{rand %2 ==0 & userGuess > rand & prime == "No"  ? "Number is even and smaller" : ""}</h1>
-    <h1 hidden={userGuess==''}>{rand %2 ==0 & userGuess < rand & prime == "No"  ? "Number is even and larger" : ""}</h1>
-    <h1 hidden={userGuess==''}>{userGuess > rand & prime == "Yes"    ? "Number is prime and smaller" : ""}</h1>
+    <h1 hidden={userGuess==''}>{userGuess < rand & rand %2 !=0 ? "Try larger and odd" : ""}</h1>
+    <h1 hidden={userGuess==''}>{userGuess > rand & rand %2 !=0  ? "Try smaller and odd" : ""}</h1>
+    <h1 hidden={userGuess==''}>{rand %2 ==0 & userGuess > rand   ? "Number is even and smaller" : ""}</h1>
+    <h1 hidden={userGuess==''}>{rand %2 ==0 & userGuess < rand   ? "Number is even and larger" : ""}</h1>
+    {/* <h1 hidden={userGuess==''}>{userGuess > rand & prime == "Yes"    ? "Number is prime and smaller" : ""}</h1>
     <h1 hidden={userGuess==''}>{userGuess < rand & prime == "Yes"    ? "Number is prime and larger" : ""}</h1>
-    
+     */}
     <h1  hidden={userGuess==''} ><span className='h1success'>{userGuess == rand ? `Hurray ${rand} is a correct guess!`: ""}</span></h1>
     </div>
     </>

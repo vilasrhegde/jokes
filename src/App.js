@@ -21,7 +21,7 @@ function App() {
     
   <div className="App">
       <nav className='navbar'>
-          <Link to='' style={navStyle}>
+          <Link to='/' style={navStyle}>
           <h1>Home</h1>
           </Link>
           <ul className="nav-links">
