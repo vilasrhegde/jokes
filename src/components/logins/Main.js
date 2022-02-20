@@ -4,6 +4,7 @@ import firebase from './firebase'
 import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
 import { useState } from 'react';
 import { auth } from './firebase'
+import { signOut } from 'firebase/auth';
 
 function Main() {
   // const handleClick = () =>{
@@ -66,13 +67,26 @@ function Main() {
     }
   }
 
+  function handleSignout() {
+    signOut(auth)
+    .then(() => {
+        console.log('logged out');
+        window.location.href=window.location.href;
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+  }
+
   return (
     <div className="logins">
       <button onClick={signInWithGoogle} className="login-with-google-btn">  Sign  In With  Google </button>
+      <br />
       <div hidden={phoneVerify}>
-          <h1>{localStorage.getItem("name")}</h1>
-          <h2>{localStorage.getItem("email")}</h2>
+          <h4>{localStorage.getItem("name")}</h4>
+          <h4>{localStorage.getItem("email")}</h4>
           <img src={localStorage.getItem("profilePic")} ></img>
+          <button onClick={handleSignout}>Sign Out</button>
       </div>
       <h5>{phoneVerify.phoneNumber}</h5>
       <br /><br />
@@ -86,11 +100,9 @@ function Main() {
       </div> */}
 
       <div className='form-container' >
-        <form onSubmit={requestOTP}>
+        <form className='form' onSubmit={requestOTP}>
           <h3>Sign In With Phone</h3>
-          <label htmlFor="phonein">Phone Number   </label>
-          <input type='tel' className='form-input' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}  id='phonein'  />
-          <br />
+          <input placeholder='Phone number' type='tel' className='form-input' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}  id=''  />
           <br />
           <button className='btn btn-outline-warning' type='submit'>Get OTP</button>
           <div id='recaptcha-container'></div>
@@ -99,13 +111,11 @@ function Main() {
           <label htmlFor="otp">Enter OTP      </label>
           <input type='number' className='form-input' value={OTP} onChange={verifyOTP}  id='otp' />
           <br />
-          <br />
           <button className='btn btn-success' type='submit'>Submit</button>
           </div>
 
         </form>
       </div>
-
 
     </div>
   );

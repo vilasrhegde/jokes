@@ -12,6 +12,7 @@ import { BrowserRouter , Routes, Route,Link } from 'react-router-dom';
 import Main from './components/logins/Main'
 
 
+
 function App() {
   const navStyle ={
     color:'white',
@@ -31,23 +32,20 @@ function App() {
               <Link to='/bored' style={navStyle}>
               <li>Bored?</li>
               </Link>
-              <Link to='/GuessNum' style={navStyle}>
-              <li>Guess Num</li>
+              <Link to='/Guess' style={navStyle}>
+              <li>Guess</li>
               </Link>
-              <Link  to='/SWGGame' style={navStyle}>
-              <li>SWG Game</li>
+              <Link  to='/SWG' style={navStyle}>
+              <li>SWG</li>
               </Link>
               <Link to='/Joke' style={navStyle}>
               <li>Joke</li>
               </Link>
-              <Link  to='/ProgJoke' style={navStyle}>
-              <li>Prog Joke</li>
+              <Link  to='/Programming' style={navStyle}>
+              <li>Programming</li>
               </Link>
               <Link  to='/captcha' style={navStyle}>
               <li>Captcha</li>
-              </Link>
-              <Link  to='/logins' style={navStyle}>
-              <li>Logins</li>
               </Link>
            
           </ul>
@@ -56,11 +54,12 @@ function App() {
      <Route exact path='/'  element={<TextForm />} />
      <Route path="/bored"  element={<Bored />}/>
      <Route path="/Joke"  element={<AxiosTicket />}/>
-     <Route path="/ProgJoke" element={<ProgJoke />} /> 
-     <Route path="/GuessNum" element={<GuessNum />} /> 
-     <Route path="/SWGGame"  element={<SnWaGu />}/>
-     <Route path="/captcha"  element={<Captcha />}/>
-     <Route path="/logins"  element={<Main />}/>
+     <Route path="/Programming" element={<ProgJoke />} /> 
+     <Route path="/Guess" element={<GuessNum />} /> 
+     <Route path="/SWG"  element={<SnWaGu />}/>
+     <Route path="/Captcha"  element={<Captcha />}/>
+
+
     </Routes>
     </div>
     </BrowserRouter>  
