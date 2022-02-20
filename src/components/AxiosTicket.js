@@ -7,6 +7,7 @@ function AxiosTicket() {
     const [find,setFind] = useState('any')
 
     const onType = async (e) =>{
+
         const search = e.target.value ;
         setFind(search);
         if(typeof cancelToken != typeof undefined){

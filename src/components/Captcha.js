@@ -1,4 +1,6 @@
 import React,{useState} from 'react';
+import '../App.css'
+import Main from './logins/Main';
 
 function Captcha() {
     const [capt, setCapt] = useState('');
@@ -21,7 +23,11 @@ function Captcha() {
     }
   return (
       <>
+      <div className='cap-container'>
+          
+      </div>
       <div className="captcha" >
+        
           <div className="inputs">
               <input type="button" className='cap_val' id='cap' readOnly value={capt ? capt : "Tap here"} onClick={generate}/>
               <input type="text" className='user' placeholder='Enter the exact value' onChange={e => setUser(e.target.value)} value={user}  />

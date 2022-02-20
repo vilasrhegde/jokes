@@ -9,6 +9,7 @@ import Captcha from './components/Captcha'
 import './App.css'
 
 import { BrowserRouter , Routes, Route,Link } from 'react-router-dom';
+import Main from './components/logins/Main'
 
 
 function App() {
@@ -45,18 +46,21 @@ function App() {
               <Link  to='/captcha' style={navStyle}>
               <li>Captcha</li>
               </Link>
+              <Link  to='/logins' style={navStyle}>
+              <li>Logins</li>
+              </Link>
            
           </ul>
       </nav>
      <Routes>
-     <Route path="/"  element={<TextForm />} />
+     <Route exact path='/'  element={<TextForm />} />
      <Route path="/bored"  element={<Bored />}/>
      <Route path="/Joke"  element={<AxiosTicket />}/>
      <Route path="/ProgJoke" element={<ProgJoke />} /> 
      <Route path="/GuessNum" element={<GuessNum />} /> 
      <Route path="/SWGGame"  element={<SnWaGu />}/>
      <Route path="/captcha"  element={<Captcha />}/>
-
+     <Route path="/logins"  element={<Main />}/>
     </Routes>
     </div>
     </BrowserRouter>  
