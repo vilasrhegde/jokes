@@ -80,9 +80,9 @@ function Main() {
 
   return (
     <div className="logins">
-      <button onClick={signInWithGoogle} className="login-with-google-btn">  Sign  In With  Google </button>
+      <button hidden onClick={signInWithGoogle} className="login-with-google-btn">  Sign  In With  Google </button>
       <br />
-      <div hidden={phoneVerify}>
+      <div hidden={!phoneVerify}>
           <h4>{localStorage.getItem("name")}</h4>
           <h4>{localStorage.getItem("email")}</h4>
           <img src={localStorage.getItem("profilePic")} ></img>
