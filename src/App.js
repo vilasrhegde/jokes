@@ -10,6 +10,7 @@ import './App.css'
 
 import { BrowserRouter , Routes, Route,Link } from 'react-router-dom';
 import Main from './components/logins/Main'
+import RockPapSci from './components/RockPapSci'
 
 
 
@@ -47,6 +48,9 @@ function App() {
               <Link  to='/captcha' style={navStyle}>
               <li>Captcha</li>
               </Link>
+              <Link to='/RPS' style={navStyle}>
+              <li>RPS</li>
+              </Link>
            
           </ul>
       </nav>
@@ -57,6 +61,7 @@ function App() {
      <Route path="/Programming" element={<ProgJoke />} /> 
      <Route path="/Guess" element={<GuessNum />} /> 
      <Route path="/SWG"  element={<SnWaGu />}/>
+     <Route path="/RPS"  element={<RockPapSci />}/>
      <Route path="/Captcha"  element={<Captcha />}/>
 
 
