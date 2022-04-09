@@ -11,6 +11,8 @@ import './App.css'
 import { BrowserRouter , Routes, Route,Link } from 'react-router-dom';
 import Main from './components/logins/Main'
 import RockPapSci from './components/RockPapSci'
+import Maths from './components/Maths'
+import BMI from './components/BMI'
 
 
 
@@ -51,6 +53,9 @@ function App() {
               <Link to='/RPS' style={navStyle}>
               <li>RPS</li>
               </Link>
+              <Link to='maths' style={navStyle}>
+              <li>BMI</li>
+              </Link>
            
           </ul>
       </nav>
@@ -63,6 +68,7 @@ function App() {
      <Route path="/SWG"  element={<SnWaGu />}/>
      <Route path="/RPS"  element={<RockPapSci />}/>
      <Route path="/Captcha"  element={<Captcha />}/>
+     <Route path='maths' element={<BMI />} />
 
 
     </Routes>
