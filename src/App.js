@@ -13,6 +13,7 @@ import Main from './components/logins/Main'
 import RockPapSci from './components/RockPapSci'
 import Maths from './components/Maths'
 import BMI from './components/BMI'
+import SpeedType from './components/SpeedType'
 
 
 
@@ -56,6 +57,9 @@ function App() {
               <Link to='maths' style={navStyle}>
               <li>BMI</li>
               </Link>
+              {/* <Link to='type' style={navStyle}>
+              <li>TypeSpeed</li>
+              </Link> */}
            
           </ul>
       </nav>
@@ -69,6 +73,8 @@ function App() {
      <Route path="/RPS"  element={<RockPapSci />}/>
      <Route path="/Captcha"  element={<Captcha />}/>
      <Route path='maths' element={<BMI />} />
+     {/* <Route path='type' element={<SpeedType />} /> */}
+
 
 
     </Routes>

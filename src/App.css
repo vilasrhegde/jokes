@@ -771,3 +771,26 @@ margin-top: 5%;
     transition: .4s;
   }
 }
+/* ----------------------------------------------------Type Speed------------------------------------------ */
+.type-main{
+  max-height: 100vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: 4% auto;
+  flex-wrap: wrap;
+  padding: 20px;
+  
+
+}
+.para{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 2rem;
+  color: rgb(143, 142, 142);
+}
